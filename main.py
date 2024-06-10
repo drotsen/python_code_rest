@@ -57,18 +57,11 @@ root.mainloop()
 # I will also add more functionality to display more details about the athletes, sports, events, etc.
 # I will also add functionality to search for other types of data in the database.
 
-
-# How to fix this error fatal: unable to access 'https://github.com/drotsen/python_code_rest.git/': error setting certificate verify locations:  CAfile: C:Programs/Git/mingw64/ssl/certs/ca-bundle.crt CApath: none  
-# This error occurs because the Git client is unable to access the SSL certificates required to verify the identity of the server. To fix this error, you can set the Git configuration to use the SSL certificates provided by the operating system. You can do this by running the following command in the Git Bash terminal:
 # git config --global http.sslCAinfo /usr/ssl/certs/ca-bundle.crt   
-# it does not work
-# The error message indicates that the Git client is unable to access the SSL certificates required to verify the identity of the server. This can happen if the SSL certificates are not properly configured on the system or if the Git client is unable to locate the certificates. To fix this error, you can try the following steps:  
-# 1. Make sure that the SSL certificates are properly configured on the system. You can check the location of the SSL certificates on your system by running the following command in the Git Bash terminal:
+
 # git config --get http.sslCAinfo   
-# This will show you the path to the SSL certificates file that Git is using. If the path is incorrect, you can set the correct path by running the following command:
-"The file C:/Programs/Git/mingw64/ssl/certs/ca-bundle.crt does not exist"
+
 # git config --global http.sslCAinfo /path/to/ssl/certs/ca-bundle.crt
-# Replace /path/to/ssl/certs/ca-bundle.crt with the correct path to the SSL certificates file on your system.
-# 2. If the SSL certificates are properly configured on the system, but the Git client is still unable to access them, you can try setting the SSL verification to false by running the following command:
+
 # git config --global http.sslVerify false
 
